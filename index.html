@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadkillas-Studios</title>
+
+    <style> 
+      body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+      }
+
+      .deadkillastitle { 
+        position: absolute; 
+        top: 20px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        padding: 10px 20px; 
+        color: #00ff55; 
+        font-size: 65px; 
+        font-family: Arial, sans-serif; 
+        font-weight: 900;
+        letter-spacing: 2px;
+        animation: arcadeNeon 4s ease-in-out infinite;
+        z-index: 2;
+      }
+
+      .titledivider {
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, black, green);
+        margin-top: 120px;
+      }
+
+        .leftdivider, .rightdivider {
+        position: absolute;
+        top: 200px;     /* starts below the title */
+        bottom: 0;      /* stretches all the way down */
+        width: 6px;     /* thicker line */
+        z-index: 1;
+        box-shadow: 0 0 10px #00ff55;
+      }
+      
+      .leftdivider {
+        left: 33%;
+        background: linear-gradient(to bottom, #00ff55, black);
+      }
+      
+      .rightdivider {
+        right: 33%;
+        background: linear-gradient(to bottom, black, #00ff55);
+      }
+
+
+
+      .Marcescent {
+        position: absolute;
+        top: 250px;
+        left: 5%;
+        width: 25%;
+        text-align: center;
+        color: white;
+        z-index: 2;
+      }
+            .TopRightImage {
+        position: absolute;
+        top: 20px;        /* aligns with your title's top */
+        right: 20px;      /* sits near the right edge */
+        width: 100px;     /* your image size */
+        height: 100px;
+        object-fit: cover;
+        z-index: 3;       /* above dividers but below title if needed */
+        border: 2px solid #00ff55;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #00ff55;
+      }
+
+
+      .CenterColumn {
+        position: absolute;
+        top: 250px; /* adjust as needed */
+        left: 33%;
+        width: 34%;
+        text-align: center;
+        z-index: 2;
+      }
+      .RightColumn {
+        position: absolute;
+        top: 250px;        /* aligns with your other columns */
+        right: 5%;         /* mirrors the left column’s 5% offset */
+        width: 25%;        /* same width as the left column */
+        text-align: center;
+        color: white;
+        z-index: 2;
+      }
+      .RightColumn h1 {
+        color: green; 
+        margin-top: 40px;
+        }
+
+      .AboutBlock {
+        margin-top: 20px;
+        padding: 15px;
+        background: rgba(0, 20, 0, 0.7); /* dark green-black */
+        border: 2px solid #00ff55;       /* neon zombie green */
+        border-radius: 10px;
+        box-shadow: 0 0 10px #00ff55, 0 0 20px #003300;
+        text-align: left;
+      }
+        .AboutBlock h2 {
+        color: #00ff55;
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+      
+      .AboutBlock p {
+        color: #d0ffd0;
+        line-height: 1.4;
+        font-size: 16px;
+      }
+      .Welcome {
+        width: 75%;
+        margin: 20px auto;   /* auto left/right centers it */
+        padding: 15px;
+        background: rgba(0, 20, 0, 0.7);
+        border: 2px solid #00ff55;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #00ff55, 0 0 20px #003300;
+        text-align: left;
+      }
+
+      .Welcome h2 {
+        color: #00ff55;
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+       .Welcome p {
+        color: #d0ffd0;
+        line-height: 1.4;
+        font-size: 16px;
+      }
+      .OtherWorksImages {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+        flex-wrap: wrap; /* makes it responsive */
+      }
+      
+      .OtherWorksImages img {
+        width: 50%;
+        border: 2px solid #00ff55;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #00ff55;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .OtherWorksImages img:hover {
+        transform: scale(1.20);
+        box-shadow: 0 0 20px #00ff55;
+      }
+            
+    
+            @keyframes arcadeNeon {
+        0% {
+          opacity: 1;
+          text-shadow:
+            0 0 5px #00ff55,
+            0 0 10px #00ff55,
+            0 0 20px #00ff55,
+            0 0 40px #00aa33;
+        }
+      
+        48% {
+          opacity: 1;
+        }
+      
+        50% {
+          opacity: 0.92; /* tiny dip */
+        }
+      
+        52% {
+          opacity: 1;
+        }
+      
+        70% {
+          text-shadow:
+            0 0 8px #00ff55,
+            0 0 15px #00ff55,
+            0 0 30px #00ff55,
+            0 0 60px #00aa33; /* glow pulse */
+        }
+      
+        100% {
+          opacity: 1;
+          text-shadow:
+            0 0 5px #00ff55,
+            0 0 10px #00ff55,
+            0 0 20px #00ff55,
+            0 0 40px #00aa33;
+        }
+      }
+    </style>
+  </head>
+    
+  <body>
+    <a href="https://deadkilla-studios.neocities.org/">
+      <img class="TopRightImage" 
+           src="https://deadkilla-studios.neocities.org/MyGiy.png" 
+           alt="MyGiy">
+    </a>
+
+    
+    <div class="deadkillastitle">
+      Deadkilla's Studios
+    </div>
+    
+    <div class="titledivider"></div>
+    <div class="leftdivider"></div>
+    <div class="rightdivider"></div>
+
+    <div class="Marcescent">
+      <h1>Marcescent: Dragon's Lair</h1>
+
+      <img src="https://deadkilla-studios.neocities.org/MarcescentDragon'sLair.png"
+           width="323"
+           height="500"
+           alt="Cover Art">
+
+      <p>
+        <a href="https://retrocyberstudios.itch.io/marcescent-dragons-lair">
+          Itch.io Page For Marcescent: Dragon's Lair
+        </a>
+      </p>
+      
+      <div class="AboutBlock"> 
+        <h2>About This Game</h2> 
+          <p>It details the story of Owen Stone, old detective on a case where 5 children have gone missing in an arcade. He has to navigate his way through the strange arcade with only one of the employees helping guide him through and giving out information. Eventually, his search leads him to the basement, where he must play through one of the VR games stashed away and defeat the creature that’s taken hold of it. 
+          
+          This is a game that was created with a team for the final project of our college degrees it is both an overtop solve the mystery and also a 2d platformer created 2024
+          
+          </p> 
+      </div>
+      
+    </div>
+    
+    
+    <div class = "CenterColumn">
+      <div class = "Welcome">
+          <h2> Welcome Everyone!</h2>
+            <p>Hello everybody, Deadkilla(03) here! This space is where I’ll be sharing updates on everything I’m working on—whether it’s video games and their development, artwork, music,programming, or social projects. I’m excited to keep creating, experimenting, and growing, and I’m grateful to have you all along for the journey. I will be getting my youtube and devlogs back up and running once I get a better computer and then I am off to the races. I hope you enjoy your stay at Deadkilla’s Studios! </p>
+        
+      </div>
+      <div>
+      
+      <h2 style="color:#00ff55;">Current Project Status: In Progress</h2>
+
+      <div class="Welcome">
+        <h2>Project Summary</h2>
+        <p>
+          This site is basically where I want it to be. I have started working on some sort of protype game where you command some troops of musket men this is my first time
+          really writing an "AI" that will control all the enemy movement and hopefully make the game a real Challenging and enjoyable experience to play.
+          
+          
+        </p>
+      
+        <h2>Project Ideas</h2>
+        <p>
+          • Archer Pilot Analysis<br>
+          • Some kind of game to get the blood going<br>
+          • Video Game Music<br>
+          • Tierlist of all MCU and Fox Movies. 
+        </p>
+        
+        
+      </div>
+      <h2 style="color:#00ff55;"> Most Recent Devlog </h2>
+      
+      <iframe
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/pVV2KNK0UDc?si=JChggEDVCEaE_elK" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; 
+      autoplay; 
+      clipboard-write; 
+      encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+      
+      
+      </div>
+      
+      
+    </div>
+    <div class ="RightColumn">
+      <h1 style="color:#00ff55;"> My Favorite Video </h1>
+ 
+      <iframe
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/Nj0BiN2CppM?si=OkqtcXzq2wvVrBXJ" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; 
+      autoplay; 
+      clipboard-write; 
+      encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+      
+      
+      <h2 style="color:#00ff55;"> My Other Works </h2>
+      <div class="OtherWorksImages">
+      <img src="https://deadkilla-studios.neocities.org/EndArcadeDesign.jpg" alt="Project 1">
+      <img src="https://deadkilla-studios.neocities.org/CorpseRunnerExamplePic.PNG" alt="Project 2">
+      
+      
+     <h3 style="color:#00ff55; margin-top: 40px;">Words On The Page</h3>
+
+      <div class="AboutBlock">
+        <p>
+          I order everything I need.<br>
+          I never leave my apartment—technology takes care of everything for me.
+        </p>
+      
+        <p>
+          My neighbors seem to live the same way. Their doors stay closed, their deliveries appear on schedule, and I’ve never seen a single one of them step into the hallway.
+        </p>
+      
+        <p>
+          Yesterday, when I grabbed my burger, I noticed the same order sitting outside my neighbor’s door. Same bag. Same timestamp. Same everything. I figured it was a coincidence.
+        </p>
+      
+        <p>
+          Today, I ordered pizza—something different, just to break the routine.
+        </p>
+      
+        <p>
+          When I opened my door, my pizza was waiting for me.<br>
+          And outside my neighbor’s door… the burger was still there.
+        </p>
+      
+        <p>
+          Not a new one.<br>
+          The same one.<br>
+          Cold now. Grease soaking through the paper. Exactly where it was yesterday.
+        </p>
+      </div>
+
+          
+
+
+
+    
+    
+    </div>
+  </body>
+</html>
